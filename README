@@ -1,0 +1,2 @@
+This is a simple compiler that support basic OOP feature, include polymorphism, inherit and overload.
+The test code is in data/, and some result is in result/
