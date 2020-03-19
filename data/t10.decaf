@@ -1,0 +1,27 @@
+class Base {
+    void hi() {
+        Print(1);
+    }
+    void hello() {
+        Print(3);
+    }
+}
+
+class Derived extends Base {
+    void hi() {
+        Print(2);
+    }
+    int foo(int c) {
+        if(c < 20)
+            return c * 10;
+        return c;
+    }
+}
+
+int main() {
+    Base b;
+    b = new Derived;
+    b.hi();
+    b = new Base;
+    b.hi();
+}

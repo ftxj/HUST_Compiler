@@ -1,0 +1,64 @@
+
+
+
+class Matrix {
+  void Init() {}
+  void Set(int x, int y, int value) {} 
+  int Get(int x, int y) {}
+  void PrintMatrix() {
+    int i;
+    int j;
+    for (i = 0; i < 10; i = i + 1) {
+      for (j = 0; j < 10; j = j + 1) 
+	   Print(Get(i,j), "\t");
+      Print("\n");
+    }
+  }
+  void SeedMatrix() {
+    int i;
+    int j;
+    for (i = 0; i < 5; i = i + 1) 
+      for (j = 0; j < 5; j = j + 1) 
+	   Set(i,j, i+j);
+    Set(2,3,4);
+    Set(4,6,2);
+    Set(2,3,5);
+    Set(0,0,1);
+    Set(1,6,3);
+    Set(7,7,7);
+  }
+}
+
+class DenseMatrix extends Matrix {
+  int[][] m;
+  void Init() {
+    int i;
+    int j;
+
+    // create mem
+    m = NewArray(10, int[]);
+    for (i = 0; i < 10; i = i +1) 
+      m[i] = NewArray(10, int);
+
+    // set all to 0.
+    for (i = 0; i < 10; i = i + 1) 
+      for (j = 0; j < 10; j = j + 1) 
+		m[i][j] = 0;
+  }
+  void Set(int x, int y, int value) {
+    m[x][y] = value;
+  }
+  int Get(int x, int y) {
+    return m[x][y];
+  }
+}
+
+
+void main()  {
+  Matrix m;
+  Print("Dense Rep \n");
+  m = new DenseMatrix;
+  m.Init();
+  m.SeedMatrix();
+  m.PrintMatrix();
+}

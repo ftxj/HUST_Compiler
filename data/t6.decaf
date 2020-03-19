@@ -1,0 +1,32 @@
+void foo(int[] a, int b) {
+    int c;
+    bool d;
+    c = a[0] * 10 + b;
+    a[1] = a[3] * b;
+    d = c < 20;
+}
+
+void main(){
+    int a;
+    bool[] d;
+    int b;
+    int c;
+    a = 1 + 4 + 5;
+    b = 2 * 6 * 8;
+    c = a + b;
+    c = a - b;
+    c = a % b;
+    
+    d[0] = a < b;
+    
+    if(d[0]) {
+        c = 9;
+    }
+    else {
+        c = 10;    
+    }
+    
+    while(d[2]) {
+        a = a + b;
+    }
+}

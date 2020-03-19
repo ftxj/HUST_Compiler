@@ -1,0 +1,36 @@
+class A {
+    int a;
+    int b;
+    bool c;
+    int foo() {
+        a = 2;
+        b = 2;
+        return a + b;
+    }
+    int boo() {
+        if(c)
+            return a;
+        return 0;
+    }
+}
+
+int f() {
+  return 5 * 10 + 4;
+}
+
+string g(int a) {
+	if (a == 5) 
+		return "hello";
+      else
+		return "world";
+}
+
+int main() {
+  string s;
+  int[] b;
+  A a;
+  b = NewArray(3, int);
+  Print(f());
+  s = g(4 * 5 / 2);
+  Print(s);
+}

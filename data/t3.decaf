@@ -1,0 +1,19 @@
+void foo(int a, int b) {
+    int c;
+    bool d;
+    c = a * 10 + b;
+    d = c < 20;
+}
+
+void main(){
+    int a;
+    int b;
+    int c;
+    bool d;
+    a = 1 + 4 + 5;
+    b = 2 * 6 * 8;
+    c = a + b;
+    c = a - b;
+    c = a % b;
+    d = a < b;
+}

@@ -1,0 +1,28 @@
+
+
+class A {
+    int data;
+    int Foo(int a) {
+        Print(a);
+        return 1;
+    }
+}  
+
+
+class B {
+    int dd;
+    int bpp(){
+        return 2;
+    }
+}
+
+void main() {
+    A a;
+    B b;
+    a = new A;
+    b = new B;
+    b.dd = 1;
+    a.data = 3;
+    a.Foo(b.dd);
+    a.Foo(a.data);
+}
